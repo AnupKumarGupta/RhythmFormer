@@ -156,3 +156,11 @@ def calculate_psd(predictions, labels, fs=30, diff_flag=False):
     psd_pred = get_psd(predictions, sr=fs)
     psd_label = get_psd(labels, sr=fs)
     return psd_pred , psd_label
+
+
+def read_fold():
+    lines = [] 
+    with open("evaluation/vipl_filter_fold.txt", 'r', encoding='utf-8') as file: 
+        for line in file:  
+            lines.append(line.strip())  
+    return lines 
