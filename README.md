@@ -68,16 +68,16 @@ If you find this repository helpful, please consider citing:
 
 ```
 @article{zou2025rhythmformer,
-title = {RhythmFormer: Extracting patterned rPPG signals based on periodic sparse attention},
-journal = {Pattern Recognition},
-volume = {164},
-pages = {111511},
-year = {2025},
-issn = {0031-3203},
-doi = {https://doi.org/10.1016/j.patcog.2025.111511},
-url = {https://www.sciencedirect.com/science/article/pii/S0031320325001712},
-author = {Bochao Zou and Zizheng Guo and Jiansheng Chen and Junbao Zhuo and Weiran Huang and Huimin Ma},
-keywords = {Remote physiological measurement, Periodic sparse attention},
+    title = {RhythmFormer: Extracting patterned rPPG signals based on periodic sparse attention},
+    journal = {Pattern Recognition},
+    volume = {164},
+    pages = {111511},
+    year = {2025},
+    issn = {0031-3203},
+    doi = {https://doi.org/10.1016/j.patcog.2025.111511},
+    url = {https://www.sciencedirect.com/science/article/pii/S0031320325001712},
+    author = {Bochao Zou and Zizheng Guo and Jiansheng Chen and Junbao Zhuo and Weiran Huang and Huimin Ma},
+    keywords = {Remote physiological measurement, Periodic sparse attention},
 }
 ```
 
