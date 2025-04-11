@@ -73,6 +73,8 @@ class RhythmFormerTrainer(BaseTrainer):
             for idx, batch in enumerate(tbar):
                 tbar.set_description("Train epoch %s" % epoch)
                 data, labels = batch[0].float(), batch[1].float()
+                data.requires_grad = True
+                data.retain_grad = True
                 N, D, C, H, W = data.shape
                 if self.config.TRAIN.AUG :
                     if self.dataset == "VIPL-HR":

@@ -2,7 +2,7 @@ BASE: ['']
 TOOLBOX_MODE: "train_and_test"      # "train_and_test"  or "only_test"
 TRAIN:
   BATCH_SIZE: 4
-  EPOCHS: 30
+  EPOCHS: 5
   LR: 9e-3
   MODEL_FILE_NAME: COHFACE_RhythmFormer
   AUG: 0
@@ -11,8 +11,8 @@ TRAIN:
     DATASET: COHFACE
     DO_PREPROCESS: False            # if first time, should be true
     DATA_FORMAT: NDCHW
-    DATA_PATH: "../Dataset/cohface/"          # Raw dataset path, need to be updated
-    CACHED_PATH: "../dataset/cohface/"    # Processed dataset save path, need to be updated
+    DATA_PATH: "/media/user/SanDisk/cohface/Data"          # Raw dataset path, need to be updated
+    CACHED_PATH: "/media/user/SanDisk/cohface/Cache"   # Processed dataset save path, need to be updated
     EXP_DATA_NAME: ""
     BEGIN: 0.0
     END: 0.6
@@ -38,8 +38,8 @@ VALID:
     DATASET: COHFACE
     DO_PREPROCESS: False            # if first time, should be true
     DATA_FORMAT: NDCHW
-    DATA_PATH: "../Dataset/cohface/"          # Raw dataset path, need to be updated
-    CACHED_PATH: "../dataset/cohface/"    # Processed dataset save path, need to be updated
+    DATA_PATH: "/media/user/SanDisk/cohface/Data"          # Raw dataset path, need to be updated
+    CACHED_PATH: "/media/user/SanDisk/cohface/Cache"   # Processed dataset save path, need to be updated
     EXP_DATA_NAME: ""
     BEGIN: 0.6
     END: 1.0
@@ -67,8 +67,8 @@ TEST:
     DATASET: COHFACE
     DO_PREPROCESS: False            # if first time, should be true
     DATA_FORMAT: NDCHW
-    DATA_PATH: "../Dataset/cohface/"          # Raw dataset path, need to be updated
-    CACHED_PATH: "../dataset/cohface/"    # Processed dataset save path, need to be updated
+    DATA_PATH: "/media/user/SanDisk/cohface/Data"          # Raw dataset path, need to be updated
+    CACHED_PATH: "/media/user/SanDisk/cohface/Cache"   # Processed dataset save path, need to be updated
     EXP_DATA_NAME: ""
     BEGIN: 0.6
     END: 1.0

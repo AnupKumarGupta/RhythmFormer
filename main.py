@@ -9,7 +9,7 @@ import torch
 from config import get_config
 from dataset import data_loader
 from neural_methods import trainer
-from unsupervised_methods.unsupervised_predictor import unsupervised_predict
+# from unsupervised_methods.unsupervised_predictor import unsupervised_predict
 from torch.utils.data import DataLoader
 import os 
 
@@ -87,24 +87,24 @@ def test(config, data_loader_dict):
     model_trainer.test(data_loader_dict)
 
 
-def unsupervised_method_inference(config, data_loader):
-    if not config.UNSUPERVISED.METHOD:
-        raise ValueError("Please set unsupervised method in yaml!")
-    for unsupervised_method in config.UNSUPERVISED.METHOD:
-        if unsupervised_method == "POS":
-            unsupervised_predict(config, data_loader, "POS")
-        elif unsupervised_method == "CHROM":
-            unsupervised_predict(config, data_loader, "CHROM")
-        elif unsupervised_method == "ICA":
-            unsupervised_predict(config, data_loader, "ICA")
-        elif unsupervised_method == "GREEN":
-            unsupervised_predict(config, data_loader, "GREEN")
-        elif unsupervised_method == "LGI":
-            unsupervised_predict(config, data_loader, "LGI")
-        elif unsupervised_method == "PBV":
-            unsupervised_predict(config, data_loader, "PBV")
-        else:
-            raise ValueError("Not supported unsupervised method!")
+# def unsupervised_method_inference(config, data_loader):
+#     if not config.UNSUPERVISED.METHOD:
+#         raise ValueError("Please set unsupervised method in yaml!")
+#     for unsupervised_method in config.UNSUPERVISED.METHOD:
+#         if unsupervised_method == "POS":
+#             unsupervised_predict(config, data_loader, "POS")
+#         elif unsupervised_method == "CHROM":
+#             unsupervised_predict(config, data_loader, "CHROM")
+#         elif unsupervised_method == "ICA":
+#             unsupervised_predict(config, data_loader, "ICA")
+#         elif unsupervised_method == "GREEN":
+#             unsupervised_predict(config, data_loader, "GREEN")
+#         elif unsupervised_method == "LGI":
+#             unsupervised_predict(config, data_loader, "LGI")
+#         elif unsupervised_method == "PBV":
+#             unsupervised_predict(config, data_loader, "PBV")
+#         else:
+#             raise ValueError("Not supported unsupervised method!")
 
 
 if __name__ == "__main__":
@@ -288,7 +288,7 @@ if __name__ == "__main__":
         train_and_test(config, data_loader_dict)
     elif config.TOOLBOX_MODE == "only_test":
         test(config, data_loader_dict)
-    elif config.TOOLBOX_MODE == "unsupervised_method":
-        unsupervised_method_inference(config, data_loader_dict)
+    # elif config.TOOLBOX_MODE == "unsupervised_method":
+    #     unsupervised_method_inference(config, data_loader_dict)
     else:
         print("TOOLBOX_MODE only support train_and_test or only_test !", end='\n\n')
